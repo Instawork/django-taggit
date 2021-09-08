@@ -171,6 +171,7 @@ class GenericUUIDTaggedItemBase(CommonGenericTaggedItemBase):
 
 
 class TaggedItem(GenericTaggedItemBase, TaggedItemBase):
+    created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     class Meta:
         verbose_name = _("tagged item")
         verbose_name_plural = _("tagged items")
