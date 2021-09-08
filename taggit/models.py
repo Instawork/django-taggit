@@ -130,6 +130,7 @@ class CommonGenericTaggedItemBase(ItemBase):
         related_name="%(app_label)s_%(class)s_tagged_items",
     )
     content_object = GenericForeignKey()
+    created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
 
     class Meta:
         abstract = True
